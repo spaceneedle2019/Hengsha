@@ -1,11 +1,21 @@
 require 'sinatra'
 require 'tilt/erb'
+require 'redcarpet'
 
-DEFAULT_LAYOUT = :'layouts/default.html'
+LAYOUT = :'layout.html'
 
 get '/' do
-  'You are at home!'
-  # erb :'home.html', :layout => DEFAULT_LAYOUT
+  html = []
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::XHTML)
+  md_directory = 'views/md/**/*'
+  Dir.glob(md_directory).select do |file_name|
+    html << markdown.render(File.read(file_name)) if File.file?(file_name)
+  end
+  erb html.join, :layout => LAYOUT
+end
+
+get '/about' do
+  erb :'about.html', :layout => LAYOUT
 end
 
 get '/:things' do

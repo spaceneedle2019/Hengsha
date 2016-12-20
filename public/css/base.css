@@ -1,0 +1,231 @@
+/*
+    Document   : main
+    Created on : 04.06.2012, 12:05:08
+    Author     : AvE
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    font-family: 'Trebuchet MS', sarif;
+    font-size: 12px;
+    color: #333333;
+    margin: 0px;
+    background-color: #e9edf0;
+}
+a:link {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666666;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #666666;
+    text-decoration: underline;
+}
+
+h1{
+    font-family: 'Trebuchet MS', serif;
+    font-size: 16px;
+    color: #333333;
+    margin: 0px;
+}
+
+h2{
+    font-family: helvetica, arial, sans-serif;
+    font-size: 14px;
+    color: #333333;
+    margin: 0px;
+}
+
+h3{
+    font-family: helvetica, arial, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    margin-top: 7px;
+    margin-bottom: 3px;
+}
+
+hr {
+    border: 0px;
+    background-color: #999999;
+    height: 1px;
+}
+
+#header{
+    text-align: right;
+    width: 100%;
+    background-color: #f5f4f4;
+}
+
+#headerbox{
+    width: 99%;
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main{
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+#footer{
+    width: 100%;
+    background-color: #f5f4f4;
+}
+
+#footerlogos{
+    width: 99%;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footerbox{
+    width: 49%;
+    padding-bottom: 5px;
+    text-align: right;
+    float: right;
+}
+
+
+#content{
+    width: 772px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+#video{
+    text-align: center;
+    display: none;
+}
+
+#picture{
+    text-align: center;
+}
+
+.headline{
+    width: 750px;
+    border-bottom: 1px dotted #999999;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-top: 1px solid #999999;
+    padding: 10px;
+    background-color: #f5f4f4;
+}
+.rightbox{
+    width: 490px;
+    background-color: #fefefe;
+    float: right;
+    text-align: justify;
+}
+
+.leftbox{
+    width: 750px;
+    padding: 10px 10px 5px 10px;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-bottom: 1px dotted #999999;
+    background-color: #fefefe;
+}
+
+.normalbox{
+    width: 750px;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    padding: 10px;
+    background-color: #fefefe;
+    text-align: justify;
+}
+
+.normalbox_dotted{
+    width: 750px;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-bottom: 1px dotted #999999;
+    padding: 10px;
+    background-color: #fefefe;
+    text-align: justify;
+}
+
+.tags{
+    text-align: right;
+    width: 55%;
+    float: right;
+    color: #660000;
+}
+
+.spacer{
+    display: block;
+    height: 10px;
+    clear: both;
+}
+
+/* web card */
+
+#about-content {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    width: 630px;
+    padding: 10px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.about_box {
+    border: 1px solid #999999;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    height: 200px;
+}
+
+.about_box img {
+    float: left;
+    margin-left: 2px;
+    margin-right: 10px;
+}
+
+.about_box.right {
+    width: 520px;
+    border: 0px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.about_box.right h3 {
+    font-size: 16px;
+}
+
+.about_box #more {
+    position: fixed;
+    margin-top: -65px;
+    margin-left: 585px;
+}
+
+#hp_badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
