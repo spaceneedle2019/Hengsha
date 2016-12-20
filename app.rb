@@ -1,21 +1,16 @@
 require 'sinatra'
 require 'tilt/erb'
 require 'redcarpet'
+require_relative 'helpers/view_helper'
 
-LAYOUT = :'layout.html'
+DEFAULT_LAYOUT = :'layout.html'
 
 get '/' do
-  html = []
-  markdown = Redcarpet::Markdown.new(Redcarpet::Render::XHTML)
-  md_directory = 'views/md/**/*'
-  Dir.glob(md_directory).select do |file_name|
-    html << markdown.render(File.read(file_name)) if File.file?(file_name)
-  end
-  erb html.join, :layout => LAYOUT
+  erb :'projects.html', :layout => DEFAULT_LAYOUT,  :locals => {:helper => ViewHelper}
 end
 
 get '/about' do
-  erb :'about.html', :layout => LAYOUT
+  erb :'about.html', :layout => DEFAULT_LAYOUT
 end
 
 get '/:things' do
