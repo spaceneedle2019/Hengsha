@@ -1,16 +1,16 @@
 require 'sinatra'
 require 'tilt/erb'
 require 'redcarpet'
-require_relative 'helpers/view_helper'
+require_relative 'views/base'
 
-DEFAULT_LAYOUT = :'layout.html'
+DEFAULT_LAYOUT = :'templates/layout.html'
 
 get '/' do
-  erb :'projects.html', :layout => DEFAULT_LAYOUT,  :locals => {:helper => ViewHelper}
+  erb :'templates/projects.html', :layout => DEFAULT_LAYOUT,  :locals => {base: Views::Base}
 end
 
 get '/about' do
-  erb :'about.html', :layout => DEFAULT_LAYOUT
+  erb :'templates/about.html', :layout => DEFAULT_LAYOUT
 end
 
 get '/:things' do
